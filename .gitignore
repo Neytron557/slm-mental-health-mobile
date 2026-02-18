@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*.egg-info/
+.ipynb_checkpoints/
+*.pyc
+
+# Model weights (large files - upload to HuggingFace Hub instead)
+*.safetensors
+*.bin
+*.pt
+*.gguf
+*.onnx
+models/
+pretrained_models/
+
+# Generated / merged datasets (reproduce via prepare_mental_health_corpus.py)
+data/merged_counsel_dataset.json
+data/*.parquet
+data/*.jsonl
+
+# Model output / prediction CSVs (not source data)
+generation_results*.csv
+*_preds.csv
+
+# System
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Jupyter
+*.ipynb
+
+# Logs
+*.log
+wandb/
+runs/

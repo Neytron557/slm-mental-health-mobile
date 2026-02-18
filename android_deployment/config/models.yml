@@ -1,0 +1,57 @@
+models_root: intern_summer/models/release_models
+artifacts_root: android_deployment/artifacts
+defaults:
+  backend: ort-genai
+  precision: int4
+  max_seq_len: 4096
+  task: text-generation
+models:
+  - name: gemma-3-270m-it-finetuned
+    source: gemma-3-270m-it-finetuned
+    quantization: fp16
+    preferred_precision: int4
+    max_seq_len: 3072
+    notes: "Baseline Gemma 270M Instruct; expect ORT GenAI success."
+
+  - name: HuggingFaceTB_SmolLM3-3B-Base-finetuned-bnb4
+    source: HuggingFaceTB_SmolLM3-3B-Base-finetuned-bnb4
+    quantization: bnb4
+    needs_fp16_source: true
+    preferred_precision: int4
+    notes: "Re-merge adapters to FP16 prior to conversion; fallback to ONNX if ORT GenAI rejects bnb4 metadata."
+
+  - name: ibm-granite_granite-3.1-2b-instruct-finetuned-bnb4
+    source: ibm-granite_granite-3.1-2b-instruct-finetuned-bnb4
+    quantization: bnb4
+    needs_fp16_source: true
+    preferred_precision: int4
+    notes: "Ensure merged Granite FP16 checkpoint before conversion."
+
+  - name: ibm-granite_granite-4.0-h-micro-finetuned-bnb4
+    source: ibm-granite_granite-4.0-h-micro-finetuned-bnb4
+    quantization: bnb4
+    needs_fp16_source: true
+    preferred_precision: int4
+    notes: "Targets ~1B params; track memory usage on device."
+
+  - name: Llama-3.2-3B-Instruct-finetuned-gptq-w4g128
+    source: Llama-3.2-3B-Instruct-finetuned-gptq-w4g128
+    quantization: gptq
+    preferred_backend: onnx
+    preferred_precision: int4
+    notes: "Start with ORT GenAI attempt; expect to fall back to ONNX + dynamic quantization."
+
+  - name: qwen2_5_1_5b_instruct-finetuned-awq
+    source: qwen2_5_1_5b_instruct-finetuned-awq
+    quantization: awq
+    needs_fp16_source: true
+    preferred_precision: int4
+    notes: "AWQ layout sometimes unsupported; allow fallback path."
+
+  - name: TinyLlama_TinyLlama-1.1B-Chat-v1.0-finetuned-bnb4
+    source: TinyLlama_TinyLlama-1.1B-Chat-v1.0-finetuned-bnb4
+    quantization: bnb4
+    needs_fp16_source: true
+    preferred_precision: int4
+    max_seq_len: 2048
+    notes: "Smaller model useful for quick sanity tests; reduce context to 2k."

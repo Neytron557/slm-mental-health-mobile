@@ -1,0 +1,558 @@
+{
+  "metadata": {
+    "base_dir": "/home/iclab/slm_iclab-1/intern_summer/models",
+    "release_dir": "/home/iclab/slm_iclab-1/intern_summer/models/release_models",
+    "seed": 42,
+    "datasets": {
+      "dreddit": {
+        "display": "Dreaddit (stress)",
+        "samples": 200,
+        "source": "asmaab/dreaddit (test split)",
+        "description": "Binary stress detection on Reddit posts."
+      },
+      "sdcnl": {
+        "display": "SDCNL (suicide vs depression)",
+        "samples": 200,
+        "source": "jingjietan/sdcnl-suicide (test split)",
+        "description": "Binary classification between suicidal intent and depression discussions."
+      },
+      "cssrs": {
+        "display": "Reddit C-SSRS",
+        "samples": 100,
+        "source": "thisiskeithkwan/Reddit_C-SSRS (test split)",
+        "description": "Multi-class suicide risk prediction using C-SSRS labels."
+      },
+      "emobench": {
+        "display": "EmoBench (emotion understanding)",
+        "samples": 200,
+        "source": "SahandSab/EmoBench emotional_understanding split",
+        "description": "Emotion understanding portion of EmoBench."
+      },
+      "goemotions": {
+        "display": "GoEmotions (validation subset)",
+        "samples": 200,
+        "source": "google-research-datasets/go_emotions (validation split, simplified config)",
+        "description": "Multi-class fine-grained emotion classification."
+      }
+    }
+  },
+  "models": {
+    "gemma-3-270m-it": {
+      "path": "/home/iclab/slm_iclab-1/intern_summer/models/gemma-3-270m-it",
+      "group": "base",
+      "metrics": {
+        "dreddit": {
+          "accuracy": 0.53,
+          "samples": 200,
+          "correct": 106,
+          "invalid_predictions": 0,
+          "batch_size_used": 8,
+          "positive_f1": 0.6928104575163397
+        },
+        "sdcnl": {
+          "accuracy": 0.535,
+          "samples": 200,
+          "correct": 107,
+          "invalid_predictions": 0,
+          "batch_size_used": 4,
+          "positive_f1": 0.6868686868686867
+        },
+        "cssrs": {
+          "accuracy": 0.17,
+          "samples": 100,
+          "correct": 17,
+          "invalid_predictions": 52,
+          "batch_size_used": 6
+        },
+        "emobench": {
+          "accuracy": 0.235,
+          "samples": 200,
+          "correct": 47,
+          "invalid_predictions": 64,
+          "batch_size_used": 6
+        },
+        "goemotions": {
+          "accuracy": 0.1,
+          "samples": 200,
+          "correct": 20,
+          "invalid_predictions": 141,
+          "batch_size_used": 6
+        }
+      }
+    },
+    "HuggingFaceTB_SmolLM3-3B-Base": {
+      "path": "/home/iclab/slm_iclab-1/intern_summer/models/HuggingFaceTB_SmolLM3-3B-Base",
+      "group": "base",
+      "metrics": {
+        "dreddit": {
+          "accuracy": 0.46,
+          "samples": 200,
+          "correct": 92,
+          "invalid_predictions": 23,
+          "batch_size_used": 8,
+          "positive_f1": 0.4052287581699346
+        },
+        "sdcnl": {
+          "accuracy": 0.465,
+          "samples": 200,
+          "correct": 93,
+          "invalid_predictions": 0,
+          "batch_size_used": 4,
+          "positive_f1": 0.37426900584795325
+        },
+        "cssrs": {
+          "accuracy": 0.07,
+          "samples": 100,
+          "correct": 7,
+          "invalid_predictions": 63,
+          "batch_size_used": 6
+        },
+        "emobench": {
+          "accuracy": 0.125,
+          "samples": 200,
+          "correct": 25,
+          "invalid_predictions": 64,
+          "batch_size_used": 6
+        },
+        "goemotions": {
+          "accuracy": 0.205,
+          "samples": 200,
+          "correct": 41,
+          "invalid_predictions": 13,
+          "batch_size_used": 6
+        }
+      }
+    },
+    "Llama-3.2-3B-Instruct": {
+      "path": "/home/iclab/slm_iclab-1/intern_summer/models/Llama-3.2-3B-Instruct",
+      "group": "base",
+      "metrics": {
+        "dreddit": {
+          "accuracy": 0.58,
+          "samples": 200,
+          "correct": 116,
+          "invalid_predictions": 0,
+          "batch_size_used": 8,
+          "positive_f1": 0.4939759036144578
+        },
+        "sdcnl": {
+          "accuracy": 0.53,
+          "samples": 200,
+          "correct": 106,
+          "invalid_predictions": 0,
+          "batch_size_used": 4,
+          "positive_f1": 0.265625
+        },
+        "cssrs": {
+          "accuracy": 0.12,
+          "samples": 100,
+          "correct": 12,
+          "invalid_predictions": 52,
+          "batch_size_used": 6
+        },
+        "emobench": {
+          "accuracy": 0.22,
+          "samples": 200,
+          "correct": 44,
+          "invalid_predictions": 61,
+          "batch_size_used": 6
+        },
+        "goemotions": {
+          "accuracy": 0.28,
+          "samples": 200,
+          "correct": 56,
+          "invalid_predictions": 8,
+          "batch_size_used": 6
+        }
+      }
+    },
+    "qwen2_5_1_5b_instruct": {
+      "path": "/home/iclab/slm_iclab-1/intern_summer/models/qwen2_5_1_5b_instruct",
+      "group": "base",
+      "metrics": {
+        "dreddit": {
+          "accuracy": 0.65,
+          "samples": 200,
+          "correct": 130,
+          "invalid_predictions": 0,
+          "batch_size_used": 8,
+          "positive_f1": 0.6666666666666666
+        },
+        "sdcnl": {
+          "accuracy": 0.49,
+          "samples": 200,
+          "correct": 98,
+          "invalid_predictions": 0,
+          "batch_size_used": 8,
+          "positive_f1": 0.5363636363636365
+        },
+        "cssrs": {
+          "accuracy": 0.07,
+          "samples": 100,
+          "correct": 7,
+          "invalid_predictions": 51,
+          "batch_size_used": 6
+        },
+        "emobench": {
+          "accuracy": 0.105,
+          "samples": 200,
+          "correct": 21,
+          "invalid_predictions": 76,
+          "batch_size_used": 6
+        },
+        "goemotions": {
+          "accuracy": 0.28,
+          "samples": 200,
+          "correct": 56,
+          "invalid_predictions": 17,
+          "batch_size_used": 6
+        }
+      }
+    },
+    "TinyLlama_TinyLlama-1.1B-Chat-v1.0": {
+      "path": "/home/iclab/slm_iclab-1/intern_summer/models/TinyLlama_TinyLlama-1.1B-Chat-v1.0",
+      "group": "base",
+      "metrics": {
+        "dreddit": {
+          "accuracy": 0.535,
+          "samples": 200,
+          "correct": 107,
+          "invalid_predictions": 1,
+          "batch_size_used": 8,
+          "positive_f1": 0.6993464052287581
+        },
+        "sdcnl": {
+          "accuracy": 0.515,
+          "samples": 200,
+          "correct": 103,
+          "invalid_predictions": 0,
+          "batch_size_used": 8,
+          "positive_f1": 0.6420664206642066
+        },
+        "cssrs": {
+          "accuracy": 0.12,
+          "samples": 100,
+          "correct": 12,
+          "invalid_predictions": 54,
+          "batch_size_used": 6
+        },
+        "emobench": {
+          "accuracy": 0.065,
+          "samples": 200,
+          "correct": 13,
+          "invalid_predictions": 134,
+          "batch_size_used": 6
+        },
+        "goemotions": {
+          "accuracy": 0.06,
+          "samples": 200,
+          "correct": 12,
+          "invalid_predictions": 71,
+          "batch_size_used": 6
+        }
+      }
+    },
+    "ibm-granite_granite-3.1-2b-instruct": {
+      "path": "/home/iclab/slm_iclab-1/intern_summer/models/ibm-granite_granite-3.1-2b-instruct",
+      "group": "base",
+      "metrics": {
+        "dreddit": {
+          "accuracy": 0.625,
+          "samples": 200,
+          "correct": 125,
+          "invalid_predictions": 0,
+          "batch_size_used": 8,
+          "positive_f1": 0.7404844290657439
+        },
+        "sdcnl": {
+          "accuracy": 0.535,
+          "samples": 200,
+          "correct": 107,
+          "invalid_predictions": 0,
+          "batch_size_used": 8,
+          "positive_f1": 0.4918032786885245
+        },
+        "cssrs": {
+          "accuracy": 0.19,
+          "samples": 100,
+          "correct": 19,
+          "invalid_predictions": 53,
+          "batch_size_used": 6
+        },
+        "emobench": {
+          "accuracy": 0.07,
+          "samples": 200,
+          "correct": 14,
+          "invalid_predictions": 131,
+          "batch_size_used": 6
+        },
+        "goemotions": {
+          "accuracy": 0.135,
+          "samples": 200,
+          "correct": 27,
+          "invalid_predictions": 7,
+          "batch_size_used": 6
+        }
+      }
+    },
+    "gemma-3-270m-it-finetuned": {
+      "path": "/home/iclab/slm_iclab-1/intern_summer/models/release_models/gemma-3-270m-it-finetuned",
+      "group": "release",
+      "metrics": {
+        "dreddit": {
+          "accuracy": 0.53,
+          "samples": 200,
+          "correct": 106,
+          "invalid_predictions": 0,
+          "batch_size_used": 8,
+          "positive_f1": 0.6928104575163397
+        },
+        "sdcnl": {
+          "accuracy": 0.535,
+          "samples": 200,
+          "correct": 107,
+          "invalid_predictions": 0,
+          "batch_size_used": 4,
+          "positive_f1": 0.6868686868686867
+        },
+        "cssrs": {
+          "accuracy": 0.17,
+          "samples": 100,
+          "correct": 17,
+          "invalid_predictions": 52,
+          "batch_size_used": 6
+        },
+        "emobench": {
+          "accuracy": 0.235,
+          "samples": 200,
+          "correct": 47,
+          "invalid_predictions": 64,
+          "batch_size_used": 6
+        },
+        "goemotions": {
+          "accuracy": 0.1,
+          "samples": 200,
+          "correct": 20,
+          "invalid_predictions": 141,
+          "batch_size_used": 6
+        }
+      }
+    },
+    "HuggingFaceTB_SmolLM3-3B-Base-finetuned-bnb4": {
+      "path": "/home/iclab/slm_iclab-1/intern_summer/models/release_models/HuggingFaceTB_SmolLM3-3B-Base-finetuned-bnb4",
+      "group": "release",
+      "metrics": {
+        "dreddit": {
+          "accuracy": 0.56,
+          "samples": 200,
+          "correct": 112,
+          "invalid_predictions": 6,
+          "batch_size_used": 8,
+          "positive_f1": 0.6188340807174888
+        },
+        "sdcnl": {
+          "accuracy": 0.475,
+          "samples": 200,
+          "correct": 95,
+          "invalid_predictions": 0,
+          "batch_size_used": 8,
+          "positive_f1": 0.05405405405405405
+        },
+        "cssrs": {
+          "accuracy": 0.1,
+          "samples": 100,
+          "correct": 10,
+          "invalid_predictions": 74,
+          "batch_size_used": 6
+        },
+        "emobench": {
+          "accuracy": 0.11,
+          "samples": 200,
+          "correct": 22,
+          "invalid_predictions": 65,
+          "batch_size_used": 6
+        },
+        "goemotions": {
+          "accuracy": 0.195,
+          "samples": 200,
+          "correct": 39,
+          "invalid_predictions": 21,
+          "batch_size_used": 6
+        }
+      }
+    },
+    "ibm-granite_granite-3.1-2b-instruct-finetuned-bnb4": {
+      "path": "/home/iclab/slm_iclab-1/intern_summer/models/release_models/ibm-granite_granite-3.1-2b-instruct-finetuned-bnb4",
+      "group": "release",
+      "metrics": {
+        "dreddit": {
+          "accuracy": 0.645,
+          "samples": 200,
+          "correct": 129,
+          "invalid_predictions": 0,
+          "batch_size_used": 8,
+          "positive_f1": 0.73992673992674
+        },
+        "sdcnl": {
+          "accuracy": 0.505,
+          "samples": 200,
+          "correct": 101,
+          "invalid_predictions": 0,
+          "batch_size_used": 8,
+          "positive_f1": 0.575107296137339
+        },
+        "cssrs": {
+          "accuracy": 0.21,
+          "samples": 100,
+          "correct": 21,
+          "invalid_predictions": 54,
+          "batch_size_used": 6
+        },
+        "emobench": {
+          "accuracy": 0.075,
+          "samples": 200,
+          "correct": 15,
+          "invalid_predictions": 134,
+          "batch_size_used": 6
+        },
+        "goemotions": {
+          "accuracy": 0.11,
+          "samples": 200,
+          "correct": 22,
+          "invalid_predictions": 16,
+          "batch_size_used": 6
+        }
+      }
+    },
+    "qwen2_5_1_5b_instruct-finetuned-awq": {
+      "path": "/home/iclab/slm_iclab-1/intern_summer/models/release_models/qwen2_5_1_5b_instruct-finetuned-awq",
+      "group": "release",
+      "metrics": {
+        "dreddit": {
+          "accuracy": 0.535,
+          "samples": 200,
+          "correct": 107,
+          "invalid_predictions": 0,
+          "batch_size_used": 8,
+          "positive_f1": 0.6970684039087948
+        },
+        "sdcnl": {
+          "accuracy": 0.525,
+          "samples": 200,
+          "correct": 105,
+          "invalid_predictions": 0,
+          "batch_size_used": 8,
+          "positive_f1": 0.4242424242424242
+        },
+        "cssrs": {
+          "accuracy": 0.06,
+          "samples": 100,
+          "correct": 6,
+          "invalid_predictions": 51,
+          "batch_size_used": 6
+        },
+        "emobench": {
+          "accuracy": 0.075,
+          "samples": 200,
+          "correct": 15,
+          "invalid_predictions": 62,
+          "batch_size_used": 6
+        },
+        "goemotions": {
+          "accuracy": 0.165,
+          "samples": 200,
+          "correct": 33,
+          "invalid_predictions": 1,
+          "batch_size_used": 6
+        }
+      }
+    },
+    "TinyLlama_TinyLlama-1.1B-Chat-v1.0-finetuned-bnb4": {
+      "path": "/home/iclab/slm_iclab-1/intern_summer/models/release_models/TinyLlama_TinyLlama-1.1B-Chat-v1.0-finetuned-bnb4",
+      "group": "release",
+      "metrics": {
+        "dreddit": {
+          "accuracy": 0.535,
+          "samples": 200,
+          "correct": 107,
+          "invalid_predictions": 0,
+          "batch_size_used": 8,
+          "positive_f1": 0.6970684039087948
+        },
+        "sdcnl": {
+          "accuracy": 0.47,
+          "samples": 200,
+          "correct": 94,
+          "invalid_predictions": 0,
+          "batch_size_used": 8,
+          "positive_f1": 0.5793650793650793
+        },
+        "cssrs": {
+          "accuracy": 0.17,
+          "samples": 100,
+          "correct": 17,
+          "invalid_predictions": 65,
+          "batch_size_used": 6
+        },
+        "emobench": {
+          "accuracy": 0.05,
+          "samples": 200,
+          "correct": 10,
+          "invalid_predictions": 128,
+          "batch_size_used": 6
+        },
+        "goemotions": {
+          "accuracy": 0.035,
+          "samples": 200,
+          "correct": 7,
+          "invalid_predictions": 159,
+          "batch_size_used": 6
+        }
+      }
+    },
+    "Llama-3.2-3B-Instruct-finetuned-gptq-w4g128": {
+      "path": "/home/iclab/slm_iclab-1/intern_summer/models/release_models/Llama-3.2-3B-Instruct-finetuned-gptq-w4g128",
+      "group": "release",
+      "metrics": {
+        "dreddit": {
+          "accuracy": 0.46,
+          "samples": 200,
+          "correct": 92,
+          "invalid_predictions": 9,
+          "batch_size_used": 8,
+          "positive_f1": 0.0
+        },
+        "sdcnl": {
+          "accuracy": 0.485,
+          "samples": 200,
+          "correct": 97,
+          "invalid_predictions": 0,
+          "batch_size_used": 8,
+          "positive_f1": 0.03738317757009346
+        },
+        "cssrs": {
+          "accuracy": 0.13,
+          "samples": 100,
+          "correct": 13,
+          "invalid_predictions": 52,
+          "batch_size_used": 6
+        },
+        "emobench": {
+          "accuracy": 0.22,
+          "samples": 200,
+          "correct": 44,
+          "invalid_predictions": 64,
+          "batch_size_used": 6
+        },
+        "goemotions": {
+          "accuracy": 0.275,
+          "samples": 200,
+          "correct": 55,
+          "invalid_predictions": 7,
+          "batch_size_used": 6
+        }
+      }
+    }
+  },
+  "failed_models": []
+}

@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "base_dir": "/home/iclab/slm_iclab-1/intern_summer/models",
+    "release_dir": "/home/iclab/slm_iclab-1/intern_summer/models/release_models",
+    "seed": 42,
+    "datasets": {
+      "dreddit": {
+        "display": "Dreaddit (stress)",
+        "samples": 256,
+        "source": "asmaab/dreaddit (test split)",
+        "description": "Binary stress detection on Reddit posts."
+      },
+      "sdcnl": {
+        "display": "SDCNL (suicide vs depression)",
+        "samples": 256,
+        "source": "jingjietan/sdcnl-suicide (test split)",
+        "description": "Binary classification between suicidal intent and depression discussions."
+      },
+      "cssrs": {
+        "display": "Reddit C-SSRS",
+        "samples": 100,
+        "source": "thisiskeithkwan/Reddit_C-SSRS (test split)",
+        "description": "Multi-class suicide risk prediction using C-SSRS labels."
+      },
+      "emobench": {
+        "display": "EmoBench (emotion understanding)",
+        "samples": 200,
+        "source": "SahandSab/EmoBench emotional_understanding split",
+        "description": "Emotion understanding portion of EmoBench."
+      },
+      "goemotions": {
+        "display": "GoEmotions (validation subset)",
+        "samples": 400,
+        "source": "google-research-datasets/go_emotions (validation split, simplified config)",
+        "description": "Multi-class fine-grained emotion classification."
+      }
+    }
+  },
+  "models": {
+    "Llama-3.2-3B-Instruct": {
+      "path": "/home/iclab/slm_iclab-1/intern_summer/models/Llama-3.2-3B-Instruct",
+      "group": "base",
+      "metrics": {
+        "dreddit": {
+          "accuracy": 0.57421875,
+          "samples": 256,
+          "correct": 147,
+          "invalid_predictions": 0,
+          "batch_size_used": 8,
+          "positive_f1": 0.46305418719211816
+        },
+        "sdcnl": {
+          "accuracy": 0.5,
+          "samples": 256,
+          "correct": 128,
+          "invalid_predictions": 0,
+          "batch_size_used": 2,
+          "positive_f1": 0.13513513513513514
+        },
+        "cssrs": {
+          "accuracy": 0.12,
+          "samples": 100,
+          "correct": 12,
+          "invalid_predictions": 52,
+          "batch_size_used": 6
+        },
+        "emobench": {
+          "accuracy": 0.22,
+          "samples": 200,
+          "correct": 44,
+          "invalid_predictions": 61,
+          "batch_size_used": 6
+        },
+        "goemotions": {
+          "accuracy": 0.27,
+          "samples": 400,
+          "correct": 108,
+          "invalid_predictions": 18,
+          "batch_size_used": 6
+        }
+      }
+    },
+    "Llama-3.2-3B-mental-health-awq-qat": {
+      "path": "/home/iclab/slm_iclab-1/intern_summer/models/release_models/Llama-3.2-3B-mental-health-awq-qat",
+      "group": "release",
+      "metrics": {
+        "dreddit": {
+          "accuracy": 0.4765625,
+          "samples": 256,
+          "correct": 122,
+          "invalid_predictions": 0,
+          "batch_size_used": 8,
+          "positive_f1": 0.0
+        },
+        "sdcnl": {
+          "accuracy": 0.578125,
+          "samples": 256,
+          "correct": 148,
+          "invalid_predictions": 0,
+          "batch_size_used": 4,
+          "positive_f1": 0.5178571428571429
+        },
+        "cssrs": {
+          "accuracy": 0.17,
+          "samples": 100,
+          "correct": 17,
+          "invalid_predictions": 53,
+          "batch_size_used": 6
+        },
+        "emobench": {
+          "accuracy": 0.195,
+          "samples": 200,
+          "correct": 39,
+          "invalid_predictions": 57,
+          "batch_size_used": 6
+        },
+        "goemotions": {
+          "accuracy": 0.46,
+          "samples": 400,
+          "correct": 184,
+          "invalid_predictions": 7,
+          "batch_size_used": 6
+        }
+      }
+    }
+  },
+  "failed_models": []
+}

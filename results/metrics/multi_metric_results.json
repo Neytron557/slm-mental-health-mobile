@@ -1,0 +1,99 @@
+{
+  "bertscore": {
+    "HuggingFaceTB_SmolLM3-3B-Base-finetuned-bnb4": {
+      "precision": 0.42766958475112915,
+      "recall": 0.23332980275154114,
+      "f1": 0.2966006100177765
+    },
+    "Llama-3.2-3B-Instruct-finetuned-gptq-w4g128": {
+      "precision": 0.6841901540756226,
+      "recall": 0.5612715482711792,
+      "f1": 0.6154471635818481
+    },
+    "TinyLlama_TinyLlama-1.1B-Chat-v1.0-finetuned-bnb4": {
+      "precision": 0.6175832748413086,
+      "recall": 0.5064927339553833,
+      "f1": 0.555818498134613
+    },
+    "gemma-3-270m-it-finetuned": {
+      "precision": 0.5040062665939331,
+      "recall": 0.39023053646087646,
+      "f1": 0.4307364523410797
+    },
+    "ibm-granite_granite-3.1-2b-instruct-finetuned-bnb4": {
+      "precision": 0.6601719260215759,
+      "recall": 0.5465194582939148,
+      "f1": 0.5977373123168945
+    },
+    "qwen2_5_1_5b_instruct-finetuned-awq": {
+      "precision": 0.6702054738998413,
+      "recall": 0.529144287109375,
+      "f1": 0.5908404588699341
+    },
+    "ibm-granite_granite-4.0-h-micro-finetuned-bnb4": {
+      "precision": 0.4726593792438507,
+      "recall": 0.2896099090576172,
+      "f1": 0.3577536344528198
+    }
+  },
+  "f1": {
+    "HuggingFaceTB_SmolLM3-3B-Base-finetuned-bnb4": {
+      "dreddit": 0.684326710816777,
+      "sdcnl": 0.2043010752688172
+    },
+    "Llama-3.2-3B-Instruct-finetuned-gptq-w4g128": {
+      "dreddit": 0.7058823529411764,
+      "sdcnl": 0.0392156862745098
+    },
+    "TinyLlama_TinyLlama-1.1B-Chat-v1.0-finetuned-bnb4": {
+      "dreddit": 0.6682134570765662,
+      "sdcnl": 0.06329113924050633
+    },
+    "gemma-3-270m-it-finetuned": {
+      "dreddit": 0.6842105263157895,
+      "sdcnl": 0.5537459283387621
+    },
+    "ibm-granite_granite-3.1-2b-instruct-finetuned-bnb4": {
+      "dreddit": 0.7722222222222223,
+      "sdcnl": 0.33636363636363636
+    },
+    "qwen2_5_1_5b_instruct-finetuned-awq": {
+      "dreddit": 0.7346938775510206,
+      "sdcnl": 0.0875
+    },
+    "ibm-granite_granite-4.0-h-micro-finetuned-bnb4": {
+      "dreddit": 0.4486692015209125,
+      "sdcnl": 0.38461538461538464
+    }
+  },
+  "qualitative": {
+    "HuggingFaceTB_SmolLM3-3B-Base-finetuned-bnb4": {
+      "empathy": 0.5545105079809824,
+      "toxicity": 0.0022565325101216636
+    },
+    "Llama-3.2-3B-Instruct-finetuned-gptq-w4g128": {
+      "empathy": 0.5462422996759415,
+      "toxicity": 0.023335049549738567
+    },
+    "TinyLlama_TinyLlama-1.1B-Chat-v1.0-finetuned-bnb4": {
+      "empathy": 0.5509294211864472,
+      "toxicity": 0.08578573067982992
+    },
+    "gemma-3-270m-it-finetuned": {
+      "empathy": 0.6028176506360372,
+      "toxicity": 0.004935618241628011
+    },
+    "ibm-granite_granite-3.1-2b-instruct-finetuned-bnb4": {
+      "empathy": 0.5338533043861389,
+      "toxicity": 0.023835585514704386
+    },
+    "qwen2_5_1_5b_instruct-finetuned-awq": {
+      "empathy": 0.5396652479966482,
+      "toxicity": 0.004763162136077881
+    },
+    "ibm-granite_granite-4.0-h-micro-finetuned-bnb4": {
+      "empathy": 0.6222792148590088,
+      "toxicity": 0.007945841550827027
+    }
+  }
+}

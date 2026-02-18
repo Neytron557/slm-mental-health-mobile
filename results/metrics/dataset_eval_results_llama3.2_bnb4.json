@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "base_dir": "/home/iclab/slm_iclab-1/intern_summer/models",
+    "release_dir": "/home/iclab/slm_iclab-1/intern_summer/models/release_models",
+    "seed": 42,
+    "datasets": {
+      "dreddit": {
+        "display": "Dreaddit (stress)",
+        "samples": 200,
+        "source": "asmaab/dreaddit (test split)",
+        "description": "Binary stress detection on Reddit posts."
+      },
+      "sdcnl": {
+        "display": "SDCNL (suicide vs depression)",
+        "samples": 200,
+        "source": "jingjietan/sdcnl-suicide (test split)",
+        "description": "Binary classification between suicidal intent and depression discussions."
+      },
+      "cssrs": {
+        "display": "Reddit C-SSRS",
+        "samples": 100,
+        "source": "thisiskeithkwan/Reddit_C-SSRS (test split)",
+        "description": "Multi-class suicide risk prediction using C-SSRS labels."
+      }
+    }
+  },
+  "models": {
+    "Llama-3.2-3B-Instruct": {
+      "path": "/home/iclab/slm_iclab-1/intern_summer/models/Llama-3.2-3B-Instruct",
+      "group": "base",
+      "metrics": {
+        "dreddit": {
+          "accuracy": 0.58,
+          "samples": 200,
+          "correct": 116,
+          "invalid_predictions": 0,
+          "batch_size_used": 8,
+          "positive_f1": 0.4939759036144578
+        },
+        "sdcnl": {
+          "accuracy": 0.515,
+          "samples": 200,
+          "correct": 103,
+          "invalid_predictions": 0,
+          "batch_size_used": 2,
+          "positive_f1": 0.1565217391304348
+        },
+        "cssrs": {
+          "accuracy": 0.12,
+          "samples": 100,
+          "correct": 12,
+          "invalid_predictions": 52,
+          "batch_size_used": 6
+        }
+      }
+    },
+    "Llama-3.2-3B-mental-health-bnb4": {
+      "path": "/home/iclab/slm_iclab-1/intern_summer/models/release_models/Llama-3.2-3B-mental-health-bnb4",
+      "group": "release",
+      "metrics": {
+        "dreddit": {
+          "accuracy": 0.495,
+          "samples": 200,
+          "correct": 99,
+          "invalid_predictions": 0,
+          "batch_size_used": 8,
+          "positive_f1": 0.192
+        },
+        "sdcnl": {
+          "accuracy": 0.505,
+          "samples": 200,
+          "correct": 101,
+          "invalid_predictions": 0,
+          "batch_size_used": 4,
+          "positive_f1": 0.1680672268907563
+        },
+        "cssrs": {
+          "accuracy": 0.11,
+          "samples": 100,
+          "correct": 11,
+          "invalid_predictions": 52,
+          "batch_size_used": 6
+        }
+      }
+    }
+  },
+  "failed_models": []
+}

@@ -1,0 +1,5 @@
+System: You are a helpful, empathetic mental health assistant.
+
+Template:
+<<SYS>>{system}<<SYS>>
+<<USER>>{user}<<ASSISTANT>>
