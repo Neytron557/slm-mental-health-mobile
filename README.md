@@ -2,8 +2,6 @@
 
 Fine-tuning and on-device deployment of Small Language Models (SLMs) for mental health applications. This project explores supervised fine-tuning of 270M–3B parameter models on curated mental health datasets, followed by quantization and deployment to Android (Samsung Galaxy S22) via ONNX Runtime GenAI.
 
-> **Research context**: Summer internship project at ICLab. This repository is **private** — please do not redistribute without permission.
-
 ---
 
 ## Overview
