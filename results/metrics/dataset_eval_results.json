@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "base_dir": "/home/iclab/slm_iclab-1/intern_summer/models",
-    "release_dir": "/home/iclab/slm_iclab-1/intern_summer/models/release_models",
+    "base_dir": "models",
+    "release_dir": "models/release_models",
     "seed": 42,
     "datasets": {
       "dreddit": {
@@ -38,7 +38,7 @@
   },
   "models": {
     "gemma-3-270m-it": {
-      "path": "/home/iclab/slm_iclab-1/intern_summer/models/gemma-3-270m-it",
+      "path": "models/gemma-3-270m-it",
       "group": "base",
       "metrics": {
         "dreddit": {
@@ -81,7 +81,7 @@
       }
     },
     "HuggingFaceTB_SmolLM3-3B-Base": {
-      "path": "/home/iclab/slm_iclab-1/intern_summer/models/HuggingFaceTB_SmolLM3-3B-Base",
+      "path": "models/HuggingFaceTB_SmolLM3-3B-Base",
       "group": "base",
       "metrics": {
         "dreddit": {
@@ -124,7 +124,7 @@
       }
     },
     "Llama-3.2-3B-Instruct": {
-      "path": "/home/iclab/slm_iclab-1/intern_summer/models/Llama-3.2-3B-Instruct",
+      "path": "models/Llama-3.2-3B-Instruct",
       "group": "base",
       "metrics": {
         "dreddit": {
@@ -167,7 +167,7 @@
       }
     },
     "qwen2_5_1_5b_instruct": {
-      "path": "/home/iclab/slm_iclab-1/intern_summer/models/qwen2_5_1_5b_instruct",
+      "path": "models/qwen2_5_1_5b_instruct",
       "group": "base",
       "metrics": {
         "dreddit": {
@@ -210,7 +210,7 @@
       }
     },
     "TinyLlama_TinyLlama-1.1B-Chat-v1.0": {
-      "path": "/home/iclab/slm_iclab-1/intern_summer/models/TinyLlama_TinyLlama-1.1B-Chat-v1.0",
+      "path": "models/TinyLlama_TinyLlama-1.1B-Chat-v1.0",
       "group": "base",
       "metrics": {
         "dreddit": {
@@ -253,7 +253,7 @@
       }
     },
     "ibm-granite_granite-3.1-2b-instruct": {
-      "path": "/home/iclab/slm_iclab-1/intern_summer/models/ibm-granite_granite-3.1-2b-instruct",
+      "path": "models/ibm-granite_granite-3.1-2b-instruct",
       "group": "base",
       "metrics": {
         "dreddit": {
@@ -296,7 +296,7 @@
       }
     },
     "gemma-3-270m-it-finetuned": {
-      "path": "/home/iclab/slm_iclab-1/intern_summer/models/release_models/gemma-3-270m-it-finetuned",
+      "path": "models/release_models/gemma-3-270m-it-finetuned",
       "group": "release",
       "metrics": {
         "dreddit": {
@@ -339,7 +339,7 @@
       }
     },
     "HuggingFaceTB_SmolLM3-3B-Base-finetuned-bnb4": {
-      "path": "/home/iclab/slm_iclab-1/intern_summer/models/release_models/HuggingFaceTB_SmolLM3-3B-Base-finetuned-bnb4",
+      "path": "models/release_models/HuggingFaceTB_SmolLM3-3B-Base-finetuned-bnb4",
       "group": "release",
       "metrics": {
         "dreddit": {
@@ -382,7 +382,7 @@
       }
     },
     "ibm-granite_granite-3.1-2b-instruct-finetuned-bnb4": {
-      "path": "/home/iclab/slm_iclab-1/intern_summer/models/release_models/ibm-granite_granite-3.1-2b-instruct-finetuned-bnb4",
+      "path": "models/release_models/ibm-granite_granite-3.1-2b-instruct-finetuned-bnb4",
       "group": "release",
       "metrics": {
         "dreddit": {
@@ -425,7 +425,7 @@
       }
     },
     "qwen2_5_1_5b_instruct-finetuned-awq": {
-      "path": "/home/iclab/slm_iclab-1/intern_summer/models/release_models/qwen2_5_1_5b_instruct-finetuned-awq",
+      "path": "models/release_models/qwen2_5_1_5b_instruct-finetuned-awq",
       "group": "release",
       "metrics": {
         "dreddit": {
@@ -468,7 +468,7 @@
       }
     },
     "TinyLlama_TinyLlama-1.1B-Chat-v1.0-finetuned-bnb4": {
-      "path": "/home/iclab/slm_iclab-1/intern_summer/models/release_models/TinyLlama_TinyLlama-1.1B-Chat-v1.0-finetuned-bnb4",
+      "path": "models/release_models/TinyLlama_TinyLlama-1.1B-Chat-v1.0-finetuned-bnb4",
       "group": "release",
       "metrics": {
         "dreddit": {
@@ -511,7 +511,7 @@
       }
     },
     "Llama-3.2-3B-Instruct-finetuned-gptq-w4g128": {
-      "path": "/home/iclab/slm_iclab-1/intern_summer/models/release_models/Llama-3.2-3B-Instruct-finetuned-gptq-w4g128",
+      "path": "models/release_models/Llama-3.2-3B-Instruct-finetuned-gptq-w4g128",
       "group": "release",
       "metrics": {
         "dreddit": {

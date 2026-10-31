@@ -91,7 +91,7 @@ Created `advanced_counsel_finetune.py` with:
 
 1. **Train Enhanced Model**:
    ```bash
-   cd /home/iclab/slm_iclab-1/intern_summer/finetuning_scripts
+   cd finetuning  # From the repository root
    ./train_advanced_counsel.sh
    ```
 

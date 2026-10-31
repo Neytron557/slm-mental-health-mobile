@@ -1,13 +1,17 @@
 
+import argparse
+import csv
 import json
 import os
+from pathlib import Path
+
 import matplotlib.pyplot as plt
 import numpy as np
-import csv
 
-def generate_charts():
-    json_path = '/home/iclab/slm_iclab-1/intern_summer/metrics_outputs/dataset_eval_results.json'
-    output_dir = '/home/iclab/slm_iclab-1/intern_summer/metrics_outputs/charts'
+def generate_charts(json_path=None, output_dir=None):
+    metrics_dir = Path(__file__).resolve().parents[1] / "results" / "metrics"
+    json_path = Path(json_path) if json_path is not None else metrics_dir / "dataset_eval_results.json"
+    output_dir = Path(output_dir) if output_dir is not None else metrics_dir / "charts"
     
     # Ensure output directory exists
     os.makedirs(output_dir, exist_ok=True)
@@ -122,4 +126,8 @@ def generate_charts():
         print(f"Generated CSV: {csv_path}")
 
 if __name__ == "__main__":
-    generate_charts()
+    parser = argparse.ArgumentParser(description="Generate model comparison charts from evaluation metrics.")
+    parser.add_argument("--input", type=Path, help="Evaluation JSON; defaults to results/metrics/dataset_eval_results.json")
+    parser.add_argument("--output-dir", type=Path, help="Chart directory; defaults to results/metrics/charts")
+    args = parser.parse_args()
+    generate_charts(args.input, args.output_dir)

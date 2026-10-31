@@ -3,7 +3,7 @@
 ## 0) Build the unified SFT corpus
 
 ```
-cd /home/iclab/slm_iclab-1/intern_summer/finetuning_scripts
+cd finetuning  # From the repository root
 python3 prepare_mental_health_corpus.py --output-dir ../data/mental_health_corpus --per-source-cap 0
 ```
 - Sources: counsel-chat (2x), Amod + ShareGPT counseling sets, alexandreteles, heliosbrahma, Dreaddit (train+val), SDCNL (train+val), Reddit C-SSRS (train), EmoBench emotional_understanding, GoEmotions train (simplified), iclab_dataset/train.csv, optimized_train.csv.

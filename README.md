@@ -223,3 +223,13 @@ This work was conducted at ICLab as part of a summer research internship. The pr
 - [AutoAWQ](https://github.com/casper-hansen/AutoAWQ)
 - [counsel-chat](https://github.com/nbertagnolli/counsel-chat) by Nicolas Bertagnolli
 - ONNX Runtime GenAI for mobile inference
+
+## Local paths and result metadata
+
+Model locations in the saved evaluation JSON files are relative to the repository root under `models/`. These paths have been normalized for portability. The recorded evaluation measurements are unchanged, and model weights are not bundled.
+
+The chart script defaults to the checked-in metrics and supports explicit input and output paths:
+
+```bash
+python scripts/generate_charts.py --input results/metrics/dataset_eval_results.json --output-dir results/metrics/charts
+```
